@@ -13,7 +13,50 @@
 		3214A1B6260FD11600315087 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3214A1B5260FD11600315087 /* Preview Assets.xcassets */; };
 		3214A1B8260FD11600315087 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3214A1B7260FD11600315087 /* Persistence.swift */; };
 		3214A1BB260FD11600315087 /* SessionSaver.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3214A1B9260FD11600315087 /* SessionSaver.xcdatamodeld */; };
+		3214A1CB260FD1F100315087 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3214A1CA260FD1F100315087 /* Cocoa.framework */; };
+		3214A1CE260FD1F100315087 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3214A1CD260FD1F100315087 /* SafariExtensionHandler.swift */; };
+		3214A1D0260FD1F100315087 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3214A1CF260FD1F100315087 /* SafariExtensionViewController.swift */; };
+		3214A1D3260FD1F100315087 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 3214A1D2260FD1F100315087 /* script.js */; };
+		3214A1D5260FD1F100315087 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3214A1D4260FD1F100315087 /* ToolbarItemIcon.pdf */; };
+		3214A1DD260FD1F100315087 /* SessionSaverSafari.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3214A1C8260FD1F100315087 /* SessionSaverSafari.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3214A1E5260FD24700315087 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3214A1E4260FD24700315087 /* TestView.swift */; };
+		3214A1EB260FD33100315087 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3214A1E4260FD24700315087 /* TestView.swift */; };
+		32C93552261017DB00337368 /* Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C93551261017DB00337368 /* Saver.swift */; };
+		32C935552610192200337368 /* Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C93551261017DB00337368 /* Saver.swift */; };
+		32C9355B26101BA100337368 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9355A26101BA100337368 /* Page.swift */; };
+		32C9355F26101C6000337368 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9355E26101C6000337368 /* Model.swift */; };
+		32C9356426101C6400337368 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9355E26101C6000337368 /* Model.swift */; };
+		32C9356826101C7600337368 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9356726101C7600337368 /* AppState.swift */; };
+		32C9356D26101C9900337368 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9355A26101BA100337368 /* Page.swift */; };
+		32C9357026101CA200337368 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9356726101C7600337368 /* AppState.swift */; };
+		32C9357726101D6200337368 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9357626101D6200337368 /* Session.swift */; };
+		32C9357C2610247800337368 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9357626101D6200337368 /* Session.swift */; };
+		32F3CC27260FE42100B559F4 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 32F3CC26260FE42100B559F4 /* style.css */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3214A1DB260FD1F100315087 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3214A1A3260FD11500315087 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3214A1C7260FD1F100315087;
+			remoteInfo = SessionSaverSafari;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3214A1E1260FD1F100315087 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3214A1DD260FD1F100315087 /* SessionSaverSafari.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3214A1AB260FD11500315087 /* SessionSaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SessionSaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +68,22 @@
 		3214A1BA260FD11600315087 /* SessionSaver.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SessionSaver.xcdatamodel; sourceTree = "<group>"; };
 		3214A1BC260FD11600315087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3214A1BD260FD11600315087 /* SessionSaver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionSaver.entitlements; sourceTree = "<group>"; };
+		3214A1C8260FD1F100315087 /* SessionSaverSafari.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SessionSaverSafari.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3214A1CA260FD1F100315087 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3214A1CD260FD1F100315087 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		3214A1CF260FD1F100315087 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		3214A1D2260FD1F100315087 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		3214A1D4260FD1F100315087 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		3214A1D9260FD1F100315087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3214A1DA260FD1F100315087 /* SessionSaverSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionSaverSafari.entitlements; sourceTree = "<group>"; };
+		3214A1E4260FD24700315087 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		32C93551261017DB00337368 /* Saver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saver.swift; sourceTree = "<group>"; };
+		32C9355A26101BA100337368 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		32C9355E26101C6000337368 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		32C9356726101C7600337368 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		32C9357626101D6200337368 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		32DA5AD62610398B00AB6FBF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		32F3CC26260FE42100B559F4 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,13 +94,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3214A1C5260FD1F100315087 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3214A1CB260FD1F100315087 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		3214A1A2260FD11500315087 = {
 			isa = PBXGroup;
 			children = (
+				32DA5AD62610398B00AB6FBF /* .gitignore */,
 				3214A1AD260FD11500315087 /* SessionSaver */,
+				3214A1EA260FD32300315087 /* shared */,
+				3214A1CC260FD1F100315087 /* SessionSaverSafari */,
+				3214A1C9260FD1F100315087 /* Frameworks */,
 				3214A1AC260FD11500315087 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				3214A1AB260FD11500315087 /* SessionSaver.app */,
+				3214A1C8260FD1F100315087 /* SessionSaverSafari.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +149,73 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3214A1C9260FD1F100315087 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3214A1CA260FD1F100315087 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3214A1CC260FD1F100315087 /* SessionSaverSafari */ = {
+			isa = PBXGroup;
+			children = (
+				3214A1CD260FD1F100315087 /* SafariExtensionHandler.swift */,
+				3214A1CF260FD1F100315087 /* SafariExtensionViewController.swift */,
+				3214A1D9260FD1F100315087 /* Info.plist */,
+				3214A1DA260FD1F100315087 /* SessionSaverSafari.entitlements */,
+				3214A1D1260FD1F100315087 /* Resources */,
+			);
+			path = SessionSaverSafari;
+			sourceTree = "<group>";
+		};
+		3214A1D1260FD1F100315087 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3214A1D2260FD1F100315087 /* script.js */,
+				3214A1D4260FD1F100315087 /* ToolbarItemIcon.pdf */,
+				32F3CC26260FE42100B559F4 /* style.css */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3214A1EA260FD32300315087 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				32C9356C26101C9000337368 /* Model */,
+				32C9357326101CC800337368 /* ViewModel */,
+				32C9356B26101C7D00337368 /* Views */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
+		32C9356B26101C7D00337368 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3214A1E4260FD24700315087 /* TestView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		32C9356C26101C9000337368 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32C9355A26101BA100337368 /* Page.swift */,
+				32C9357626101D6200337368 /* Session.swift */,
+				32C9355E26101C6000337368 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		32C9357326101CC800337368 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				32C9356726101C7600337368 /* AppState.swift */,
+				32C93551261017DB00337368 /* Saver.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,15 +226,34 @@
 				3214A1A7260FD11500315087 /* Sources */,
 				3214A1A8260FD11500315087 /* Frameworks */,
 				3214A1A9260FD11500315087 /* Resources */,
+				3214A1E1260FD1F100315087 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3214A1DC260FD1F100315087 /* PBXTargetDependency */,
 			);
 			name = SessionSaver;
 			productName = SessionSaver;
 			productReference = 3214A1AB260FD11500315087 /* SessionSaver.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3214A1C7260FD1F100315087 /* SessionSaverSafari */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3214A1DE260FD1F100315087 /* Build configuration list for PBXNativeTarget "SessionSaverSafari" */;
+			buildPhases = (
+				3214A1C4260FD1F100315087 /* Sources */,
+				3214A1C5260FD1F100315087 /* Frameworks */,
+				3214A1C6260FD1F100315087 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SessionSaverSafari;
+			productName = SessionSaverSafari;
+			productReference = 3214A1C8260FD1F100315087 /* SessionSaverSafari.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -107,6 +265,9 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					3214A1AA260FD11500315087 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3214A1C7260FD1F100315087 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -125,6 +286,7 @@
 			projectRoot = "";
 			targets = (
 				3214A1AA260FD11500315087 /* SessionSaver */,
+				3214A1C7260FD1F100315087 /* SessionSaverSafari */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +301,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3214A1C6260FD1F100315087 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32F3CC27260FE42100B559F4 /* style.css in Resources */,
+				3214A1D5260FD1F100315087 /* ToolbarItemIcon.pdf in Resources */,
+				3214A1D3260FD1F100315087 /* script.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -146,14 +318,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C9357C2610247800337368 /* Session.swift in Sources */,
+				32C9356426101C6400337368 /* Model.swift in Sources */,
 				3214A1B8260FD11600315087 /* Persistence.swift in Sources */,
+				32C9356D26101C9900337368 /* Page.swift in Sources */,
+				32C9357026101CA200337368 /* AppState.swift in Sources */,
+				3214A1EB260FD33100315087 /* TestView.swift in Sources */,
 				3214A1B1260FD11500315087 /* ContentView.swift in Sources */,
 				3214A1BB260FD11600315087 /* SessionSaver.xcdatamodeld in Sources */,
 				3214A1AF260FD11500315087 /* SessionSaverApp.swift in Sources */,
+				32C935552610192200337368 /* Saver.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3214A1C4260FD1F100315087 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3214A1E5260FD24700315087 /* TestView.swift in Sources */,
+				32C93552261017DB00337368 /* Saver.swift in Sources */,
+				32C9356826101C7600337368 /* AppState.swift in Sources */,
+				3214A1D0260FD1F100315087 /* SafariExtensionViewController.swift in Sources */,
+				32C9357726101D6200337368 /* Session.swift in Sources */,
+				32C9355F26101C6000337368 /* Model.swift in Sources */,
+				3214A1CE260FD1F100315087 /* SafariExtensionHandler.swift in Sources */,
+				32C9355B26101BA100337368 /* Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3214A1DC260FD1F100315087 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3214A1C7260FD1F100315087 /* SessionSaverSafari */;
+			targetProxy = 3214A1DB260FD1F100315087 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3214A1BE260FD11600315087 /* Debug */ = {
@@ -274,6 +475,7 @@
 		3214A1C1260FD11600315087 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SessionSaver/SessionSaver.entitlements;
@@ -298,6 +500,7 @@
 		3214A1C2260FD11600315087 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SessionSaver/SessionSaver.entitlements;
@@ -319,6 +522,46 @@
 			};
 			name = Release;
 		};
+		3214A1DF260FD1F100315087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SessionSaverSafari/SessionSaverSafari.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZ5YSJH8XE;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SessionSaverSafari/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.VictorPuga.SessionSaver.SessionSaverSafari;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3214A1E0260FD1F100315087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SessionSaverSafari/SessionSaverSafari.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZ5YSJH8XE;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SessionSaverSafari/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.VictorPuga.SessionSaver.SessionSaverSafari;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +579,15 @@
 			buildConfigurations = (
 				3214A1C1260FD11600315087 /* Debug */,
 				3214A1C2260FD11600315087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3214A1DE260FD1F100315087 /* Build configuration list for PBXNativeTarget "SessionSaverSafari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3214A1DF260FD1F100315087 /* Debug */,
+				3214A1E0260FD1F100315087 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
