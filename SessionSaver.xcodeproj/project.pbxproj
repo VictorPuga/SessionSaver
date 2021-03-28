@@ -83,6 +83,7 @@
 		32C9356726101C7600337368 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		32C9357626101D6200337368 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		32DA5AD62610398B00AB6FBF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		32DA5AD926103A0B00AB6FBF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		32F3CC26260FE42100B559F4 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				32DA5AD62610398B00AB6FBF /* .gitignore */,
+				32DA5AD926103A0B00AB6FBF /* README.md */,
 				3214A1AD260FD11500315087 /* SessionSaver */,
 				3214A1EA260FD32300315087 /* shared */,
 				3214A1CC260FD1F100315087 /* SessionSaverSafari */,
