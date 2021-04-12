@@ -7,7 +7,8 @@
 
 import SwiftUI
 import Combine
+import CoreData
 
 class AppState: ObservableObject {
-  @Published var sessions: [Session] = []
+  // @Published var sessions: [Session] = []
 }

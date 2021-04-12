@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Session: Codable {
+struct Session: Codable, Identifiable {
+  let id: UUID
   let name: String
-  let pages: [Page]
+  // let pages: [Page]
 }

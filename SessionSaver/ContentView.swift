@@ -17,17 +17,21 @@ struct ContentView: View {
     ) private var items: FetchedResults<Item>
 
     var body: some View {
+      VStack {
         List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-            }
-            .onDelete(perform: deleteItems)
+              ForEach(items) { item in
+                  Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+              }
+              .onDelete(perform: deleteItems)
+          }
+        Divider()
+        SessionsView()
         }
-        .toolbar {
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
-            }
+      .toolbar {
+        Button(action: addItem) {
+          Label("Add Item", systemImage: "plus")
         }
+      }
     }
 
     private func addItem() {

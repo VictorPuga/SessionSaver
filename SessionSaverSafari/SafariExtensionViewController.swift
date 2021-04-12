@@ -18,7 +18,7 @@ class PopoverViewWrapper: SFSafariExtensionViewController {
     // }
     // let view = PopoverView().environmentObject(state)
     // self.view = NSHostingView(rootView: view)
-    let view = TestView()
+    let view = SessionsView()
     let wrapper = NSHostingView(rootView: view)
     
     wrapper.setBoundsSize(NSSize(width: 400, height: 500))
