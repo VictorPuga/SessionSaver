@@ -11,9 +11,8 @@ import SwiftUI
 struct SessionSaverApp: App {
   var body: some Scene {
     WindowGroup {
-      // ContentView()
+      ContentView()
         // .environment(\.managedObjectContext, persistenceController.container.viewContext)
-      SessionsView()
         .onReceive(
           NotificationCenter.default.publisher(for: NSApplication.willResignActiveNotification)
         ) { _ in

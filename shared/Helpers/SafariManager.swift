@@ -1,5 +1,5 @@
 //
-//  Saver.swift
+//  SafariManager.swift
 //  SessionSaverSafari
 //
 //  Created by Víctor Manuel Puga Ruiz on 27/03/21.
@@ -8,7 +8,8 @@
 import SafariServices
 import Combine
 
-class Saver {  private var currentPage: SFSafariPage?
+class SafariManager {
+  private var currentPage: SFSafariPage?
   private var currentWindow: SFSafariWindow?
   
   func setWindow(_ newWindow: SFSafariWindow) {
@@ -87,6 +88,6 @@ func openNewTab(url: URL?) {
   }
 }
 
-extension Saver {
-  static let shared = Saver()
+extension SafariManager {
+  static let shared = SafariManager()
 }

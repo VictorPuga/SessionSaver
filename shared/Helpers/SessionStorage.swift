@@ -53,9 +53,9 @@ class SessionStorage: NSObject, ObservableObject {
     }
   }
   
-  override convenience init() {
-    self.init(inMemory: true)
-  }
+  // override convenience init() {
+  //   self.init(inMemory: true)
+  // }
   
   private func getSessionMO(for session: Session) -> SessionMO? {
     let predicate = NSPredicate(format: "id = %@", session.id as CVarArg)
@@ -71,7 +71,7 @@ class SessionStorage: NSObject, ObservableObject {
   
   func add(name: String) {
     cancellable?.cancel()
-    cancellable = Saver.shared.getTabs()
+    cancellable = SafariManager.shared.getTabs()
       .map { [weak self] pages -> [PageMO] in
         pages.enumerated().map { (index, page) in
           let newPage = PageMO(context: self!.context)
@@ -101,9 +101,7 @@ class SessionStorage: NSObject, ObservableObject {
     dbHelper.delete(mo)
   }
   
-  func update() {
-    
-  }
+  func update() {}
 }
 
 extension SessionStorage: NSFetchedResultsControllerDelegate {
@@ -116,7 +114,4 @@ extension SessionStorage: NSFetchedResultsControllerDelegate {
 
 extension SessionStorage {
   static let shared = SessionStorage()
-  static let preview = SessionStorage(inMemory: true)
 }
-
-
