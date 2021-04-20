@@ -46,10 +46,11 @@ class PersistentContainer {
 class CustomPersistentContainer: NSPersistentContainer {
   override open class func defaultDirectoryURL() -> URL {
     var storeURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "TZ5YSJH8XE.group.com.VictorPuga.SessionSaver")
-    storeURL = storeURL?
-      .appendingPathComponent("Library")
-      .appendingPathComponent("Application Support")
-      .appendingPathComponent("SessionSaver")
+    
+    for path in ["Library", "Application Support", "SessionSaver"] { 
+      storeURL = storeURL?.appendingPathComponent(path)
+    }
+    
     return storeURL!
   }
 }

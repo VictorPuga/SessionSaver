@@ -50,12 +50,12 @@ struct TestView: View {
   }
 }
 
-struct TestView_Previews: PreviewProvider {
-  static var previews: some View {
-    TestView(
-      viewModel: TestViewViewModel(
-        dataManager: DataManager.preview
-      )
-    )
-  }
-}
+// struct TestView_Previews: PreviewProvider {
+//   static var previews: some View {
+//     TestView(
+//       viewModel: TestViewViewModel(
+//         dataManager: DataManager.preview
+//       )
+//     )
+//   }
+// }

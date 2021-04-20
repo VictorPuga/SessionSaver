@@ -23,6 +23,8 @@
 		3214A1DD260FD1F100315087 /* SessionSaverSafari.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3214A1C8260FD1F100315087 /* SessionSaverSafari.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3214A1E5260FD24700315087 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3214A1E4260FD24700315087 /* TestView.swift */; };
 		3214A1EB260FD33100315087 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3214A1E4260FD24700315087 /* TestView.swift */; };
+		324F4DE4262E56E6002FD448 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F4DE3262E56E6002FD448 /* Sequence.swift */; };
+		324F4DE7262E5718002FD448 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F4DE3262E56E6002FD448 /* Sequence.swift */; };
 		3251C2C2261DF3760081212A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251C2C1261DF3760081212A /* DataManager.swift */; };
 		3251C2C3261DF3760081212A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251C2C1261DF3760081212A /* DataManager.swift */; };
 		3251C2C7261DF4E70081212A /* TestViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251C2C6261DF4E70081212A /* TestViewViewModel.swift */; };
@@ -43,6 +45,10 @@
 		32931139261A491B001190DF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32931137261A491B001190DF /* MainView.swift */; };
 		32931140261A4C39001190DF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3293113F261A4C39001190DF /* Logger.swift */; };
 		32931141261A4C39001190DF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3293113F261A4C39001190DF /* Logger.swift */; };
+		32C83ACA2624BA7500BA0260 /* PageMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C83AC92624BA7500BA0260 /* PageMO.swift */; };
+		32C83ACB2624BA7500BA0260 /* PageMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C83AC92624BA7500BA0260 /* PageMO.swift */; };
+		32C83AD22624C13C00BA0260 /* SessionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C83AD12624C13C00BA0260 /* SessionRowView.swift */; };
+		32C83AD32624C13C00BA0260 /* SessionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C83AD12624C13C00BA0260 /* SessionRowView.swift */; };
 		32C93552261017DB00337368 /* Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C93551261017DB00337368 /* Saver.swift */; };
 		32C935552610192200337368 /* Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C93551261017DB00337368 /* Saver.swift */; };
 		32C9355B26101BA100337368 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C9355A26101BA100337368 /* Page.swift */; };
@@ -102,6 +108,7 @@
 		3214A1D9260FD1F100315087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3214A1DA260FD1F100315087 /* SessionSaverSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionSaverSafari.entitlements; sourceTree = "<group>"; };
 		3214A1E4260FD24700315087 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		324F4DE3262E56E6002FD448 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		3251C2C1261DF3760081212A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3251C2C6261DF4E70081212A /* TestViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewViewModel.swift; sourceTree = "<group>"; };
 		3251C2CB261DFB8A0081212A /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
@@ -111,6 +118,8 @@
 		3293113226197761001190DF /* SessionStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
 		32931137261A491B001190DF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3293113F261A4C39001190DF /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		32C83AC92624BA7500BA0260 /* PageMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMO.swift; sourceTree = "<group>"; };
+		32C83AD12624C13C00BA0260 /* SessionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRowView.swift; sourceTree = "<group>"; };
 		32C93551261017DB00337368 /* Saver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saver.swift; sourceTree = "<group>"; };
 		32C9355A26101BA100337368 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		32C9356726101C7600337368 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -255,14 +264,24 @@
 		32931144261A4EEB001190DF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				324F4DE3262E56E6002FD448 /* Sequence.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		32C83AD02624C12700BA0260 /* SessionRowView */ = {
+			isa = PBXGroup;
+			children = (
+				32C83AD12624C13C00BA0260 /* SessionRowView.swift */,
+			);
+			path = SessionRowView;
 			sourceTree = "<group>";
 		};
 		32C9356B26101C7D00337368 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				32E6749E261F762E0062251D /* SessionsView */,
+				32C83AD02624C12700BA0260 /* SessionRowView */,
 				32931137261A491B001190DF /* MainView.swift */,
 			);
 			path = Views;
@@ -271,10 +290,11 @@
 		32C9356C26101C9000337368 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				32C9355A26101BA100337368 /* Page.swift */,
 				32C9357626101D6200337368 /* Session.swift */,
+				32C9355A26101BA100337368 /* Page.swift */,
 				3214A1B9260FD11600315087 /* SessionSaver.xcdatamodeld */,
 				3251C2D0261DFF1F0081212A /* SessionMO.swift */,
+				32C83AC92624BA7500BA0260 /* PageMO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -398,7 +418,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C83ACA2624BA7500BA0260 /* PageMO.swift in Sources */,
 				32C9357C2610247800337368 /* Session.swift in Sources */,
+				324F4DE4262E56E6002FD448 /* Sequence.swift in Sources */,
 				3251C2C2261DF3760081212A /* DataManager.swift in Sources */,
 				32931138261A491B001190DF /* MainView.swift in Sources */,
 				3203BFB2261F567400FF2FBC /* PersistentContainer.swift in Sources */,
@@ -412,6 +434,7 @@
 				3251C2C7261DF4E70081212A /* TestViewViewModel.swift in Sources */,
 				32E674AA261F769F0062251D /* SessionsViewViewModel.swift in Sources */,
 				3214A1BB260FD11600315087 /* SessionSaver.xcdatamodeld in Sources */,
+				32C83AD22624C13C00BA0260 /* SessionRowView.swift in Sources */,
 				3293113326197761001190DF /* SessionStorage.swift in Sources */,
 				325DA42A261CD61F008957E2 /* CoreDataHelper.swift in Sources */,
 				32E674A5261F76720062251D /* SessionsView.swift in Sources */,
@@ -426,7 +449,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C83ACB2624BA7500BA0260 /* PageMO.swift in Sources */,
 				3214A1E5260FD24700315087 /* TestView.swift in Sources */,
+				324F4DE7262E5718002FD448 /* Sequence.swift in Sources */,
 				3251C2C3261DF3760081212A /* DataManager.swift in Sources */,
 				32931139261A491B001190DF /* MainView.swift in Sources */,
 				3203BFB3261F567400FF2FBC /* PersistentContainer.swift in Sources */,
@@ -440,6 +465,7 @@
 				3251C2C8261DF4E70081212A /* TestViewViewModel.swift in Sources */,
 				32E674AB261F769F0062251D /* SessionsViewViewModel.swift in Sources */,
 				32C9355B26101BA100337368 /* Page.swift in Sources */,
+				32C83AD32624C13C00BA0260 /* SessionRowView.swift in Sources */,
 				3293113426197761001190DF /* SessionStorage.swift in Sources */,
 				325DA42B261CD61F008957E2 /* CoreDataHelper.swift in Sources */,
 				32E674A6261F76720062251D /* SessionsView.swift in Sources */,

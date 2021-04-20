@@ -6,14 +6,16 @@
 //
 
 import Foundation
-
+import CoreData
+import Combine
 
 class MockDataManager {
-  var dbHelper: CoreDataHelper = .preview
+  // var dbHelper: CoreDataHelper = .preview
 }
 
 // MARK: - DataMAnagerProtocol
 extension MockDataManager: DataManagerProtocol {
+  
   func fetchSessions() -> [Session] {
     []
   }
@@ -21,4 +23,16 @@ extension MockDataManager: DataManagerProtocol {
   func addSession(name: String) {
     
   }
+  
+  func addPage(_ page: Page, to session: Session) {
+    
+  }
+  
+  func deleteSession(_ session: Session) {
+    
+  }
+  
+  // func publisher<T>(for type: T.Type, changeTypes: [ChangeType]) -> AnyPublisher<[([T], ChangeType)], Never> where T : NSManagedObject {
+  //   AnyPublisher<[([T], ChangeType)], Never>([].publisher)
+  // }
 }

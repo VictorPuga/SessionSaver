@@ -9,16 +9,15 @@ import SwiftUI
 
 @main
 struct SessionSaverApp: App {
-  let persistenceController = PersistenceController.shared
-  
   var body: some Scene {
     WindowGroup {
-      ContentView()
-        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+      // ContentView()
+        // .environment(\.managedObjectContext, persistenceController.container.viewContext)
+      SessionsView()
         .onReceive(
           NotificationCenter.default.publisher(for: NSApplication.willResignActiveNotification)
         ) { _ in
-          CoreDataHelper.shared.saveContext()
+          PersistenceController.shared.saveContext()
         }
     }
   }

@@ -17,21 +17,21 @@ protocol TestViewViewModelProtocol {
 final class TestViewViewModel: ObservableObject {
   @Published var sessions = [Session]()
   
-  var dataManager: DataManagerProtocol
+  // var dataManager: DataManagerProtocol
   
-  init(dataManager: DataManagerProtocol = DataManager.shared) {
-    self.dataManager = dataManager
-    fetchSessions()
-  }
+  // init(dataManager: DataManagerProtocol = DataManager.shared) {
+    // self.dataManager = dataManager
+    // fetchSessions()
+  // }
 }
 
 extension TestViewViewModel: TestViewViewModelProtocol {
   func fetchSessions() {
-    sessions = dataManager.fetchSessions()
+    // sessions = dataManager.fetchSessions()
   }
   
   func addSession(name: String) {
-    dataManager.addSession(name: name)
-    fetchSessions()
+    // dataManager.addSession(name: name)
+    // fetchSessions()
   }
 }

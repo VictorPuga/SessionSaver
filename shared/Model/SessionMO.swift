@@ -12,6 +12,8 @@ final class SessionMO: NSManagedObject {
   @NSManaged var id: UUID
   @NSManaged var name: String
   
+  @NSManaged var pages: NSSet
+  
   // override func awakeFromInsert() {
   //   super.awakeFromInsert()
   //   id = UUID()
@@ -20,9 +22,10 @@ final class SessionMO: NSManagedObject {
 
 extension SessionMO {
   func convertToSession() -> Session {
-    Session(
+    return Session(
       id: id,
-      name: name
+      name: name,
+      pages: pages.map { ($0 as! PageMO).convertToPage() }
     )
   }
 }

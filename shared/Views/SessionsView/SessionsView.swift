@@ -15,19 +15,24 @@ struct SessionsView: View {
   
   // MARK: - Body
   var body: some View {
-    VStack {
-      if empty {
-        Text("You have no saved sessions")
-      } else {
-        ForEach(viewModel.sessions) { session in
-          Text(session.name)
+    ScrollView {
+      VStack {
+        if empty {
+          Text("You have no saved sessions")
+        } else {
+          ForEach(viewModel.sessions) { session in
+            SessionRowView(session: session, onTap: viewModel.deteleSession)
+          }
+        }
+        // Button("Add") {
+        // }
+        Button("Save current Session") {
+          viewModel.addSession(name: String(Int.random(in: 0...999)))
         }
       }
-      Button("Add") {
-        viewModel.addSession(name: "hey")
-      }
+      // .padding()
+      .frame(width: 200, height: 300, alignment: .center)
     }
-    .padding()
   }
 }
 
