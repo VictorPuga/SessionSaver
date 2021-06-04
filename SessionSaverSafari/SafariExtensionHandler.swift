@@ -50,7 +50,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
   
   override func popoverWillShow(in window: SFSafariWindow) {
     // NSLog("WILL SHOW")
-    Saver.shared.setWindow(window)
+    SafariManager.shared.setWindow(window)
   }
   
   override func popoverDidClose(in window: SFSafariWindow) {}

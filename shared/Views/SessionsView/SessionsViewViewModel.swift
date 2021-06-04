@@ -19,8 +19,8 @@ class SessionsViewViewModel: ObservableObject {
   
   private var cancellable: AnyCancellable?
   
-  init(coursePublisher: AnyPublisher<[Session], Never> = SessionStorage.shared.sessions.eraseToAnyPublisher()) {
-    cancellable = coursePublisher.sink { sessions in
+  init(sessionPublisher: AnyPublisher<[Session], Never> = SessionStorage.shared.sessions.eraseToAnyPublisher()) {
+    cancellable = sessionPublisher.sink { sessions in
       logger.log("receiving sessions")
       self.sessions = sessions
     }

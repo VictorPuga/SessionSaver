@@ -12,6 +12,8 @@ class SafariManager {
   private var currentPage: SFSafariPage?
   private var currentWindow: SFSafariWindow?
   
+  // MARK: - Public
+  
   func setWindow(_ newWindow: SFSafariWindow) {
     currentWindow = newWindow
   }
@@ -22,46 +24,6 @@ class SafariManager {
         self.currentWindow = window
       }
     }
-  }
-  
-  func getPage(_ tab: SFSafariTab, completion: @escaping (Page) -> Void) {
-    tab.getActivePage { page in
-      guard let page = page else { return }
-      page.getPropertiesWithCompletionHandler { properties in
-        guard let properties = properties else { return }
-        guard let url = properties.url else { return }
-        guard url.scheme == "http" || url.scheme == "https" else { return }
-        guard let title = properties.title else { return }
-
-        let newPage = Page(title: title, url: url, index: 0)
-        completion(newPage)
-      }
-    }
-  }
-  
-  func getPage(from tab: SFSafariTab) -> AnyPublisher<Page, Never> {
-    return Deferred {
-      Future() { promise in
-        self.getPage(tab) { page in
-          promise(.success(page))
-        }
-      }
-    }
-    .eraseToAnyPublisher()
-  }
-  
-  func getTabsPublisher() -> AnyPublisher<[SFSafariTab], Never> {
-    guard let window = currentWindow else {
-      logger.log("No window")
-      fatalError("No Window")
-    }
-    return Deferred {
-      Future { promise in
-        window.getAllTabs { tabs in
-          promise(.success(tabs))
-        }
-      }
-    }.eraseToAnyPublisher()
   }
   
   func getTabs() -> AnyPublisher<[Page], Never> {
@@ -77,14 +39,61 @@ class SafariManager {
     }
     .eraseToAnyPublisher()
   }
-}
+  
+  func openSession(_ session: Session) {
+    for page in session.pages {
+      openURL(url: page.url)
+    }
+  }
+  
+  // MARK: - Private
+  
+  private func openURL(url: URL?) {
+    if let url = url {
+      NSWorkspace.shared.open(url)
+    } else {
+      // NSWorkspace.shared.open(Page.blank.url)
+    }
+  }
+  
+  private func getPage(_ tab: SFSafariTab, completion: @escaping (Page) -> Void) {
+    tab.getActivePage { page in
+      guard let page = page else { return }
+      page.getPropertiesWithCompletionHandler { properties in
+        guard let properties = properties else { return }
+        guard let url = properties.url else { return }
+        guard url.scheme == "http" || url.scheme == "https" else { return }
+        guard let title = properties.title else { return }
 
-
-func openNewTab(url: URL?) {
-  if let url = url {
-    NSWorkspace.shared.open(url)
-  } else {
-    // NSWorkspace.shared.open(Page.blank.url)
+        let newPage = Page(title: title, url: url, index: 0)
+        completion(newPage)
+      }
+    }
+  }
+  
+  private func getPage(from tab: SFSafariTab) -> AnyPublisher<Page, Never> {
+    return Deferred {
+      Future() { promise in
+        self.getPage(tab) { page in
+          promise(.success(page))
+        }
+      }
+    }
+    .eraseToAnyPublisher()
+  }
+  
+  private func getTabsPublisher() -> AnyPublisher<[SFSafariTab], Never> {
+    guard let window = currentWindow else {
+      logger.log("No window")
+      fatalError("No Window")
+    }
+    return Deferred {
+      Future { promise in
+        window.getAllTabs { tabs in
+          promise(.success(tabs))
+        }
+      }
+    }.eraseToAnyPublisher()
   }
 }
 

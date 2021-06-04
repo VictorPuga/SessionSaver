@@ -15,32 +15,52 @@ struct SessionsView: View {
   
   // MARK: - Body
   var body: some View {
-    ScrollView {
-      VStack {
+    VStack(alignment: .leading) {
+      List {
+        HStack {
+          Spacer()
+          Button("SETTINGS") {}
+        }
         if empty {
           Text("You have no saved sessions")
         } else {
-          ForEach(viewModel.sessions) { session in
-            SessionRowView(session: session, onTap: viewModel.deteleSession)
+          Section(header: header) {
+            ForEach(viewModel.sessions) { session in
+              SessionRowView(session: session, onTap: viewModel.deteleSession)
+            }
           }
         }
-        // Button("Add") {
-        // }
-        Button("Save current Session") {
-          viewModel.addSession(name: String(Int.random(in: 0...999)))
+        if Bundle.main.bundlePath.hasSuffix(".appex") {
+          Button("Save current Session") {
+            viewModel.addSession(name: String(Int.random(in: 0...999)))
+          }
+          NewSessionButton()
         }
       }
-      // .padding()
-      .frame(width: 200, height: 300, alignment: .center)
+      .listStyle(InsetListStyle())
     }
+    // .frame(width: 200, height: 300, alignment: .center)
+  }
+  
+  var header: some View {
+    Text("Sessions")
+      .font(.largeTitle)
+      .foregroundColor(.white)
   }
 }
 
 // MARK: - Preview
 struct SessionsView_Previews: PreviewProvider {
   static var previews: some View {
-    SessionsView()
-      .previewLayout(.sizeThatFits)
-      .padding()
+    SessionsView(
+      viewModel: .init(
+        sessionPublisher:
+          mockSessions
+          .publisher
+          .collect()
+          .eraseToAnyPublisher()
+      )
+    )
+    .previewLayout(.sizeThatFits)
   }
 }

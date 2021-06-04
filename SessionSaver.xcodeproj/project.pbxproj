@@ -23,8 +23,12 @@
 		3214A1DD260FD1F100315087 /* SessionSaverSafari.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3214A1C8260FD1F100315087 /* SessionSaverSafari.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		324F4DE4262E56E6002FD448 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F4DE3262E56E6002FD448 /* Sequence.swift */; };
 		324F4DE7262E5718002FD448 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F4DE3262E56E6002FD448 /* Sequence.swift */; };
+		324F4DFD262E5C78002FD448 /* NewSessionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F4DFC262E5C78002FD448 /* NewSessionButton.swift */; };
+		324F4DFE262E5C78002FD448 /* NewSessionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F4DFC262E5C78002FD448 /* NewSessionButton.swift */; };
 		3251C2D1261DFF1F0081212A /* SessionMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251C2D0261DFF1F0081212A /* SessionMO.swift */; };
 		3251C2D2261DFF1F0081212A /* SessionMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3251C2D0261DFF1F0081212A /* SessionMO.swift */; };
+		32557C6F2667C6C20010FB9A /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32557C6E2667C6C20010FB9A /* MockData.swift */; };
+		32557C702667C6C20010FB9A /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32557C6E2667C6C20010FB9A /* MockData.swift */; };
 		325DA425261CD607008957E2 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325DA424261CD607008957E2 /* DBHelper.swift */; };
 		325DA426261CD607008957E2 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325DA424261CD607008957E2 /* DBHelper.swift */; };
 		325DA42A261CD61F008957E2 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325DA429261CD61F008957E2 /* CoreDataHelper.swift */; };
@@ -98,7 +102,9 @@
 		3214A1D9260FD1F100315087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3214A1DA260FD1F100315087 /* SessionSaverSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionSaverSafari.entitlements; sourceTree = "<group>"; };
 		324F4DE3262E56E6002FD448 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		324F4DFC262E5C78002FD448 /* NewSessionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSessionButton.swift; sourceTree = "<group>"; };
 		3251C2D0261DFF1F0081212A /* SessionMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionMO.swift; sourceTree = "<group>"; };
+		32557C6E2667C6C20010FB9A /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		325DA424261CD607008957E2 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		325DA429261CD61F008957E2 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		3293113226197761001190DF /* SessionStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				3214A1B5260FD11600315087 /* Preview Assets.xcassets */,
+				32557C6E2667C6C20010FB9A /* MockData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -225,11 +232,19 @@
 			isa = PBXGroup;
 			children = (
 				3214A1B7260FD11600315087 /* PersistenceController.swift */,
-				32C93551261017DB00337368 /* SafariManager.swift */,
-				3293113226197761001190DF /* SessionStorage.swift */,
 				325DA429261CD61F008957E2 /* CoreDataHelper.swift */,
+				3293113226197761001190DF /* SessionStorage.swift */,
+				32C93551261017DB00337368 /* SafariManager.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		324F4DFB262E5C52002FD448 /* NewSessionButton */ = {
+			isa = PBXGroup;
+			children = (
+				324F4DFC262E5C78002FD448 /* NewSessionButton.swift */,
+			);
+			path = NewSessionButton;
 			sourceTree = "<group>";
 		};
 		3293113E261A4C28001190DF /* Utilities */ = {
@@ -263,6 +278,7 @@
 			children = (
 				32E6749E261F762E0062251D /* SessionsView */,
 				32C83AD02624C12700BA0260 /* SessionRowView */,
+				324F4DFB262E5C52002FD448 /* NewSessionButton */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,8 +306,8 @@
 		32E6749E261F762E0062251D /* SessionsView */ = {
 			isa = PBXGroup;
 			children = (
-				32E674A9261F769F0062251D /* SessionsViewViewModel.swift */,
 				32E674A4261F76720062251D /* SessionsView.swift */,
+				32E674A9261F769F0062251D /* SessionsViewViewModel.swift */,
 			);
 			path = SessionsView;
 			sourceTree = "<group>";
@@ -401,6 +417,7 @@
 				32C83ACA2624BA7500BA0260 /* PageMO.swift in Sources */,
 				32C9357C2610247800337368 /* Session.swift in Sources */,
 				324F4DE4262E56E6002FD448 /* Sequence.swift in Sources */,
+				324F4DFD262E5C78002FD448 /* NewSessionButton.swift in Sources */,
 				3203BFB2261F567400FF2FBC /* PersistentContainer.swift in Sources */,
 				3214A1B8260FD11600315087 /* PersistenceController.swift in Sources */,
 				32C9356D26101C9900337368 /* Page.swift in Sources */,
@@ -416,6 +433,7 @@
 				3214A1AF260FD11500315087 /* SessionSaverApp.swift in Sources */,
 				32C935552610192200337368 /* SafariManager.swift in Sources */,
 				3251C2D1261DFF1F0081212A /* SessionMO.swift in Sources */,
+				32557C6F2667C6C20010FB9A /* MockData.swift in Sources */,
 				325DA425261CD607008957E2 /* DBHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +445,7 @@
 				32C83ACB2624BA7500BA0260 /* PageMO.swift in Sources */,
 				324F4DE7262E5718002FD448 /* Sequence.swift in Sources */,
 				3203BFB3261F567400FF2FBC /* PersistentContainer.swift in Sources */,
+				324F4DFE262E5C78002FD448 /* NewSessionButton.swift in Sources */,
 				32C93552261017DB00337368 /* SafariManager.swift in Sources */,
 				32C9356826101C7600337368 /* AppState.swift in Sources */,
 				3214A1D0260FD1F100315087 /* SafariExtensionViewController.swift in Sources */,
@@ -442,6 +461,7 @@
 				3293112C2619481E001190DF /* SessionSaver.xcdatamodeld in Sources */,
 				3293112F261974EC001190DF /* PersistenceController.swift in Sources */,
 				3251C2D2261DFF1F0081212A /* SessionMO.swift in Sources */,
+				32557C702667C6C20010FB9A /* MockData.swift in Sources */,
 				325DA426261CD607008957E2 /* DBHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
