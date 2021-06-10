@@ -13,28 +13,16 @@ struct SessionsView: View {
   
   private var empty: Bool { viewModel.sessions.isEmpty }
   
-  // MARK: - Body
   var body: some View {
     VStack(alignment: .leading) {
       List {
-        HStack {
-          Spacer()
-          Button("SETTINGS") {}
-        }
+        header
         if empty {
           Text("You have no saved sessions")
         } else {
-          Section(header: header) {
-            ForEach(viewModel.sessions) { session in
-              SessionRowView(session: session, onTap: viewModel.deteleSession)
-            }
+          ForEach(viewModel.sessions) { session in
+            SessionRowView(session: session, onTap: viewModel.deteleSession)
           }
-        }
-        if Bundle.main.bundlePath.hasSuffix(".appex") {
-          Button("Save current Session") {
-            viewModel.addSession(name: String(Int.random(in: 0...999)))
-          }
-          NewSessionButton()
         }
       }
       .listStyle(InsetListStyle())
@@ -43,9 +31,19 @@ struct SessionsView: View {
   }
   
   var header: some View {
-    Text("Sessions")
-      .font(.largeTitle)
-      .foregroundColor(.white)
+    HStack {
+      Text("Sessions")
+        .font(.largeTitle)
+        .foregroundColor(Color(.textColor))
+      Spacer()
+      Button("SETTINGS") {}
+      if Bundle.main.bundlePath.hasSuffix(".appex") {
+        Button("Save current Session") {
+          viewModel.addSession(name: String(Int.random(in: 0...999)))
+        }
+        // NewSessionButton()
+      }
+    }
   }
 }
 

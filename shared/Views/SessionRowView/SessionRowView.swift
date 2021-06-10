@@ -11,6 +11,8 @@ struct SessionRowView: View {
   let session: Session
   let onTap: (Session) -> Void
   
+  @State private var closed = false
+  
   var pages: [Page] {
     session.pages.sorted(by: \.index)
   }
@@ -20,71 +22,49 @@ struct SessionRowView: View {
   var body: some View {
     Section(header: header) {
       GroupBox {
-        VStack {
-          
-          ForEach(0..<count) { i in
-            VStack {
-              Text(pages[i].title)
+        VStack(alignment: .leading, spacing: 0) {
+          ForEach(pages) { page in
+            VStack(alignment: .leading) {
+              Text(page.title)
                 .font(.caption)
-              
-              divider(i)
+              divider(page.index)
             }
-            // VStack(alignment: .leading) {
-            //   Divider()
-            // }
           }
         }
       }
     }
-    
   }
   
   var header: some View {
     HStack {
       Text(session.name)
         .font(.title)
-      Button("v") {
-        
+      Button(action: {
+        withAnimation {
+          closed.toggle()
+        }
+      }) {
+        Label("Toggle", systemImage: "chevron.down")
+          .labelStyle(IconOnlyLabelStyle())
+          .rotationEffect(closed ? .degrees(-90) : .zero)
       }
+      .buttonStyle(BorderlessButtonStyle())
       Spacer()
-      Button("GEAR") {
-        
+      Button("DELETE/GEAR??") {
+        onTap(session)
       }
       Button("OPEN") {
-        
+        SafariManager.shared.openSession(session)
       }
     }
   }
   
+  @ViewBuilder
   func divider(_ i: Int) -> some View {
-    if (i != count - 1) {
-      return AnyView(Divider())
-    }
-    return AnyView(EmptyView())
-  }
-  
-  var body2: some View {
-    Section(header: Text("title")) {
-      VStack(alignment: .leading, spacing: 0) {
-        HStack {
-          Text(session.name)
-            .font(.largeTitle)
-          Spacer()
-          Button("Delete") {
-            onTap(session)
-          }
-          Button("Open") {
-            SafariManager.shared.openSession(session)
-          }
-        }
-        ForEach(pages) { page in
-          VStack(alignment: .leading) {
-            Divider()
-            Text(page.title)
-              .font(.caption)
-          }
-        }
-      }
+    if (count == 1 || i != count - 1) {
+      Divider()
+    } else {
+      EmptyView()
     }
   }
 }
